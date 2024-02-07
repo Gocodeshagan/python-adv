@@ -1,0 +1,10 @@
+from tkinter import *   
+root = Tk()
+c = Canvas(root, height=600, width=600, bg='light blue')
+c.create_line(100, 100, 200, 100)
+c.create_rectangle(300, 300, 400, 450, fill='red')
+c.create_oval(100,100,200,200,fill='purple')
+img= image=PhotoImage(file="C:\\Users\\ucbra\\OneDrive\\Desktop\\UC Academy\\Shagan\\py adv 1\\s.png")
+c.create_image(100,500,image=img)
+c.pack()
+root.mainloop()
