@@ -1,14 +1,17 @@
 '''
-Project:
-Author:
+Project:Frut ninja
+Author:Sagan
 Date:
 [insert a description of your project and how to play!]
 '''
 
 # Imports go here, you'll need tkinter and some functions from the random module
-
+from tkinter import *
+import random
 # Create your window and call it 'root'
 # Create your Canvas and call it 'c'
+root = Tk()
+c = Canvas(root, height=600, width=600, bg='light blue')
 
 class Fruit():
     '''
@@ -29,6 +32,12 @@ class Fruit():
     '''
     
     # Put __init__ function here
+    def __init__(self, x, y, fruit_img):
+        self.x = X
+        self.y = Y
+        self.obj = c.create_image(x,y,image = fruit_img)
+        c.tag_bind(self.obj, '<ButtonPress1>',self.destroy)
+        self.move()
 
     def destroy(self, event):
         c.delete(self.obj)
